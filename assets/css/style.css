@@ -14,14 +14,7 @@ nav {
 }
 .logo,
 .menu{
-	top:0;
-	right: 0;
-	height: 4px;
-	width: 24px;
-	text-align: right;
-	margin: 2rem 2rem;
-	background: #ec008c;
-	transition: all 0.3s;
+
 	position: absolute;
 	z-index:2000;
 }
@@ -35,7 +28,45 @@ nav {
 	text-align: left;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	background-image: url(../img/icon/logo.png);
+	background-image: url(http://www.hugeinc.com/content/images/util/logo.png);
+}
+
+.menu1{
+	position: absolute;
+	z-index:2000;
+	top:0;
+	right: 0;
+	height: 4px;
+	width: 24px;
+	text-align: right;
+	margin: 2rem 2rem;
+	background: #ec008c;
+	transition: all 0.3s;
+	posit
+}
+.menu2{
+	position: absolute;
+	z-index:2000;
+	top:10px;
+	right: 0;
+	height: 4px;
+	width: 24px;
+	text-align: right;
+	margin: 2rem 2rem;
+	background: #ec008c;
+	transition: all 0.3s;
+}
+.menu3{
+	position: absolute;
+	z-index:2000;
+	top:20px;
+	right: 0;
+	height: 4px;
+	width: 24px;
+	text-align: right;
+	margin: 2rem 2rem;
+	background: #ec008c;
+	transition: all 0.3s;
 }
 
 #toggle:hover .menu:before{
@@ -76,7 +107,74 @@ nav.open{
 	height: 100%;
 	transition: none;
 	-o-transition: none;
-	-moz-t-transition: none;
+	-moz-transition: none;
 	-webkit-transition:none;
 
 }
+
+nav ul{
+	top: -10%;
+	padding: 0;
+	opacity: 0;
+	width: 100%;
+	text-align: center;
+	visibility: hidden;
+	display: table-cell;
+	vertical-align: middle;
+	transform: perspective(600px) rotateX(10deg);
+	transition: all 0,5s cubic-bezier(0.7, 0, 0.36, 0.63);
+
+}
+
+nav ul li{
+	visibility: hidden;
+}
+
+nav ul li a{
+	color:white;
+	width: 100%;
+	display: block;
+	padding: 8px 0 0;
+	letter-spacing:  -0.06em;
+}
+
+nav ul li a:hover{
+	color:#ec008c;
+	background-color: white;
+}
+
+nav.open ul{
+	top: 0;
+	opacity: 1;
+	margin-top: 0;
+	visibility: visible;
+	transform: perspective(600px) rotateX(0deg);
+
+}
+
+nav.open ul li{
+	color: #fff;
+	font-size: 60px;
+	visibility: visible !important;
+}
+
+nav.header-in{
+	background-color: rgba(217,40,130,0.9);
+}
+
+/* js style toggle for menu*/
+
+.solid #toggle .menu{
+	background: #fff;
+}
+.solid #toggle .menu:after{
+	background-color: #fff;
+}
+.solid #toggle .menu:before{
+	background-color: #fff;
+}
+
+nav.solid #logo .logo{
+	background-color: white;
+}
+
