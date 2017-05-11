@@ -8,7 +8,7 @@ nav {
 	margin-top: 0;
 	position: fixed;
 	padding-top:  0px;
-	background: none;
+	background: #f4c3e7;
 	transition: all 0.6s cubic-bezier(0.7, 0.01, 0.3, 1)
 
 }
@@ -31,7 +31,7 @@ nav {
 	background-image: url(http://www.hugeinc.com/content/images/util/logo.png);
 }
 
-.menu1{
+.menu{
 	position: absolute;
 	z-index:2000;
 	top:0;
@@ -42,31 +42,24 @@ nav {
 	margin: 2rem 2rem;
 	background: #ec008c;
 	transition: all 0.3s;
-	posit
 }
-.menu2{
-	position: absolute;
-	z-index:2000;
-	top:10px;
-	right: 0;
-	height: 4px;
+
+.menu:before, .menu:after{
+	content:  '';
+	display: block;
 	width: 24px;
-	text-align: right;
-	margin: 2rem 2rem;
+	height: 4px;
 	background: #ec008c;
-	transition: all 0.3s;
+	position: absolute;
+	z-index: -1;
 }
-.menu3{
-	position: absolute;
-	z-index:2000;
-	top:20px;
-	right: 0;
-	height: 4px;
-	width: 24px;
-	text-align: right;
-	margin: 2rem 2rem;
-	background: #ec008c;
-	transition: all 0.3s;
+
+.menu:before{
+	top: -8px;
+}
+
+.menu:after{
+	top:8px;
 }
 
 #toggle:hover .menu:before{
@@ -161,6 +154,8 @@ nav.open ul li{
 nav.header-in{
 	background-color: rgba(217,40,130,0.9);
 }
+
+
 
 /* js style toggle for menu*/
 
